@@ -1,9 +1,46 @@
 var diceResult = document.querySelector('.cube2');
 var content = document.querySelector(".image");
 
+  window.onkeydown = function (e) {
+    if (!diceResult.hasAttribute('disabled')) {
+        if (e.keyCode == 13 || e.keyCode == 32) {
+            rolldice();
+
+            const playSound = document.querySelector('.playSound');
+            setTimeout(function() { 
+              playSound.play();
+
+            }, 1500) 
+          }
+      }
+  }
+
+  // ad show  
+  function adShow() {
+  var changeImg = document.getElementById("adImg");
+
+  var images = ["add-image/2.png","add-image/3.png","add-image/4.png","add-image/5.png","add-image/1.png"];
+  var imgContinue = 0;
+
+  function changeImage(){
+  changeImg.setAttribute("src", images[imgContinue]);
+  imgContinue++;
+
+  if(imgContinue >= images.length)
+  {
+    imgContinue = 0;
+  }
+}
+
+setInterval(changeImage, 5000);
+}
+
+adShow()
+
   // ============ # call main functionality # =================
   diceResult.addEventListener('click', (e)=>{
     rolldice();
+
     const playSound = document.querySelector('.playSound');
     setTimeout(function() { 
       playSound.play();

@@ -14,7 +14,9 @@
     <div class="container">
         <div class="cube">
             <img class="stadium" src="stadium1.png" alt="">
-            <div class="image"></div>
+            <div class="image">
+                <img id="adImg" src="add-image/1.png" alt="">
+            </div>
             <audio class="playSound" src="audio/dicePlay.mp3"></audio>
             <div class="cube2" id="cube2">
                 <img src="img/1.png" alt="">
@@ -28,10 +30,3 @@
 </html>
 
 
-window.onkeydown = function (e) {
-    if (!startbtn.hasAttribute('disabled')) {
-        if (e.keyCode == 13 || e.keyCode == 32) {
-            gamestart();
-        }
-    }
-}
