@@ -1,6 +1,7 @@
 :root{
   --cube-responsive-right: 242px;
   --cube-responsive-left: -242px;
+  --hit-with-wall: -350px;
 }
 
 * {
@@ -33,7 +34,38 @@ body {
   top: 28px;
   left: 35.5%;
   width: 29%;
-  height: 74px;
+  height: 85px;
+}
+
+@media (max-width: 1399.98px) {
+  .image img{
+      height: 85px;    
+  }
+
+}
+
+@media (max-width: 575.98px) {
+  .image img{
+      height: 130px;    
+  }
+}
+
+@media (max-width: 767.98px) {
+  .image img{
+      height: 130px;    
+  }
+}
+
+@media (max-width: 991.98px) {
+  .image img{
+      height: 130px;    
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .image img{
+      height: 130px;    
+  }
 }
 
 .cube2 {
@@ -55,7 +87,7 @@ body {
 
     50%{
       bottom: 0;
-      transform: translateY(-350px) scale(0.5) rotate(360deg);
+      transform: translateY(var(--hit-with-wall)) scale(0.5) rotate(360deg);
       
     }
 
@@ -69,7 +101,7 @@ body {
 
   @keyframes animright {
     50%{
-      transform: translateY(-350px) scale(.5)  rotate(360deg);
+      transform: translateY(var(--hit-with-wall)) scale(.5)  rotate(360deg);
     }
 
     100%{
@@ -80,7 +112,7 @@ body {
   
   @keyframes animleft {
     50%{
-      transform: translateY(-350px) scale(.5)  rotate(360deg);
+      transform: translateY(var(--hit-with-wall)) scale(.5)  rotate(360deg);
     }
 
     100%{
@@ -97,7 +129,7 @@ body {
 
   50%{
     bottom: 0;
-    transform: translateY(-350px) scale(0.5) rotate(360deg);
+    transform: translateY(var(--hit-with-wall)) scale(0.5) rotate(360deg);
     
   }
 
@@ -132,43 +164,15 @@ body {
   .cube2 {
       top: 528px;
     }
-
-  .image img {
-    height: 83px;
-  }
 }
 
-@media(max-width: 1366px){
-  .image img {
-    height: 88px;
-    }
-}
 
-@media(max-width: 1338px){
-  .image img {
-    height: 92px;
-    }
-}
 
-@media(max-width: 1327px){
-  .image img {
-    height: 82px;
-    }
-}
 
-@media(max-width: 1326px){
-  .image img {
-    height: 77px;
-    }
-}
 
 @media(max-width: 990px){
   .cube2 {
       top: 500px;
-    }
-
-  .image img {
-    height: 77px;
     }
 }
 
@@ -176,8 +180,47 @@ body {
   .cube2 {
       top: 492px;
     }
+}
 
 
+@media (max-width: 575.98px) {
+  .cube2 {
+   top: 785px;
+ }
+
+  :root{
+    --hit-with-wall: -560px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .cube2 {
+    top: 795px;
+  }
+
+  :root{
+    --hit-with-wall: -580px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .cube2 {
+  top: 790px;
+}
+
+:root{
+    --hit-with-wall: -580px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .cube2 {
+  top: 800px;
+}
+
+:root{
+    --hit-with-wall: -580px;
+  }
 }
 
 
