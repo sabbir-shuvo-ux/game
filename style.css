@@ -1,0 +1,183 @@
+:root{
+  --cube-responsive-right: 242px;
+  --cube-responsive-left: -242px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+.container {
+  height: 100vh;
+}
+
+.cube {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.stadium {
+  position: absolute;
+  width: 100%;
+  height: 585px;
+}
+
+.image img {
+  position: absolute;
+  top: 28px;
+  left: 35.5%;
+  width: 29%;
+  height: 74px;
+}
+
+.cube2 {
+  position: absolute;
+  top: 500px;
+  left: 45%;
+  transition:transform 300ms linear;
+}
+
+.cube2 img {
+  position: absolute;
+  width: 60px;
+  cursor: pointer;
+}
+
+/* ================ */
+
+@keyframes animate {
+
+    50%{
+      bottom: 0;
+      transform: translateY(-350px) scale(0.5) rotate(360deg);
+      
+    }
+
+    100%{
+      bottom: 0;
+      transform: translateY(0px) scale(1);
+    }
+  }
+
+  /* another animation */
+
+  @keyframes animright {
+    50%{
+      transform: translateY(-350px) scale(.5)  rotate(360deg);
+    }
+
+    100%{
+      transform: translate(var(--cube-responsive-right), 0px) scale(1);
+    }
+  }
+
+  
+  @keyframes animleft {
+    50%{
+      transform: translateY(-350px) scale(.5)  rotate(360deg);
+    }
+
+    100%{
+      transform: translate(var(--cube-responsive-left), 0px) scale(1);
+    } 
+  }
+
+  /* Animate Medias for smaller devices */
+
+  @media (max-width: 991px) {
+/* ================ */
+
+@keyframes animate {
+
+  50%{
+    bottom: 0;
+    transform: translateY(-350px) scale(0.5) rotate(360deg);
+    
+  }
+
+  100%{
+    bottom: 0;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+
+  :root{
+    --cube-responsive-right: 100px;
+    --cube-responsive-left: -100px;
+  }
+
+  } /* end 991 media */
+
+  @media (min-width: 991px) {
+
+    .stadium {
+      height: 100vh;
+    }
+
+    .cube2 {
+      top: 600px;
+      left: 47%;
+    }
+
+}
+
+@media(max-width: 1440px){
+  .cube2 {
+      top: 528px;
+    }
+
+  .image img {
+    height: 83px;
+  }
+}
+
+@media(max-width: 1366px){
+  .image img {
+    height: 92px;
+    }
+}
+
+@media(max-width: 1338px){
+  .image img {
+    height: 92px;
+    }
+}
+
+@media(max-width: 1327px){
+  .image img {
+    height: 82px;
+    }
+}
+
+@media(max-width: 1326px){
+  .image img {
+    height: 77px;
+    }
+}
+
+@media(max-width: 990px){
+  .cube2 {
+      top: 500px;
+    }
+
+  .image img {
+    height: 77px;
+    }
+}
+
+@media(max-width: 1024px){
+  .cube2 {
+      top: 492px;
+    }
+
+
+}
+
+
