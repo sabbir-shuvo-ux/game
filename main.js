@@ -1,11 +1,6 @@
 var diceResult = document.querySelector('.cube2');
 var content = document.querySelector(".image");
 
-// ============= # load full data # ================
-window.addEventListener('load', ()=>{
-
-
-
   // ============ # call main functionality # =================
   diceResult.addEventListener('click', (e)=>{
     rolldice();
@@ -16,9 +11,6 @@ window.addEventListener('load', ()=>{
     }, 1500)  
   });
 
-  
-
-})
 
 // =========== # main functionality # ==============
 function rolldice() {
